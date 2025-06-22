@@ -1,7 +1,7 @@
-const jsonServer = require('json-server')
-const server = jsonServer.create()
-const router = jsonServer.router('db.json')
-const middlewares = jsonServer.defaults({ static: false }) // Disable static files
+const jsonserver = require('json-server')
+const server = jsonserver.create()
+const router = jsonserver.router('db.json')
+const middlewares = jsonserver.defaults() // Disable static files
 
 server.use(middlewares)
 server.use(router)
